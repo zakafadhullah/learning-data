@@ -25,8 +25,6 @@ for i in range(100):  # Buat 100 data properti
         luas_tanah = random.choice(['90', '120'])
     elif luas_bangunan == '60':
         luas_tanah = random.choice(['120', '150'])
-
-    # luas_tanah = random.randint(50, 500) if tipe == 'Rumah' else 0
     
     if lokasi == 'Jakarta':
         harga_per_meter = 5000000
@@ -41,7 +39,6 @@ for i in range(100):  # Buat 100 data properti
     elif tipe == 'Apartemen':
         harga_per_meter = round(random.randint(25000000, 60000000))
     harga = ((int(luas_bangunan) * harga_per_meter) + (int(luas_tanah) * harga_per_meter))
-    # harga = random.randint(500, 5000) * 1000000  # Harga dalam juta rupiah
 
     status_transaksi = random.choice(['Terjual', 'Belum Terjual'])
     tanggal_transaksi = (datetime.now() - timedelta(days=random.randint(1, 365))).strftime('%Y-%m-%d') if status_transaksi == 'Terjual' else None
